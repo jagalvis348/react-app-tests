@@ -1,0 +1,38 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "extends": "react-app",
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "plugins": [
+        "jsdoc"
+    ],
+    "rules": {
+        "indent": [
+            "error", 2,
+            {"SwitchCase": 1}
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "comma-dangle": ["error", "never"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "jsdoc/no-undefined-types": 0
+    }
+}

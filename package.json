@@ -2,19 +2,29 @@
   "name": "reactjs-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged"
+  },
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@types/jest": "^24.0.22",
+    "eslint": "^6.6.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-jsdoc": "^8.7.0"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
