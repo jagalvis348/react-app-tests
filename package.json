@@ -7,8 +7,7 @@
     "lint": "eslint -fix",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "react": "^16.11.0",
@@ -27,8 +26,14 @@
   "lint-staged": {
     "*.+(js|jsx)": [
       "eslint --fix",
+      "npm test",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
